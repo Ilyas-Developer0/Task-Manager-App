@@ -1,0 +1,64 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7c3aed;
+  --muted:#94a3b8;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background:linear-gradient(180deg,#071129 0%, #0b1220 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+h1{margin:0 0 18px 0;font-size:28px}
+
+.App{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:linear-gradient(180deg,#071129 0%, #0b1220 100%);
+}
+
+.app-header{
+  width:100%;
+  padding:20px 16px;
+  background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(124,58,237,0.06));
+  box-shadow:0 4px 20px rgba(2,6,23,0.6);
+  text-align:center;
+}
+.app-header h1{margin:0;font-size:28px}
+
+.content{
+  width:100%;
+  max-width:720px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  margin:22px 16px;
+}
+h1{margin:0 0 18px 0;font-size:28px}
+.task-form{display:flex;gap:8px;width:100%;margin-bottom:18px}
+.task-input{flex:1;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none}
+.task-input::placeholder{color:var(--muted)}
+.btn{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.btn-add{background:var(--accent);color:white}
+.btn-complete{background:transparent;color:var(--accent);border:1px solid rgba(124,58,237,0.18)}
+.btn-delete{background:transparent;color:#ff6b6b;border:1px solid rgba(255,107,107,0.12)}
+.task-list{list-style:none;padding:0;margin:0}
+.task-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+.task-item.completed{opacity:0.7}
+.task-item .task-text{max-width:70%;word-break:break-word}
+.task-item.completed .task-text{text-decoration:line-through;color:var(--muted)}
+.task-actions{display:flex;gap:8px}
+.no-tasks{color:var(--muted)}
+
+@media (max-width:480px){
+  .content{padding:16px}
+  .app-header h1{font-size:20px}
+}
